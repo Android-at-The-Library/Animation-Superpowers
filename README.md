@@ -1,11 +1,8 @@
 # Animation-Superpowers
+
 Adding basic animations to Images and Buttons of your app.
 
-
-## ViewPropertyAnimator
-
-
-## Absolute Destination
+## ViewPropertyAnimator - Absolute Destination
 
 This animation will move the object to the specified coordinate.
 
@@ -37,7 +34,7 @@ bob.setOnClickListener( new View.onClickListener() {
 });
 ```
 
-## Relative Movement
+## ViewPropertyAnimator - Relative Movement
 
 This animation will simply offset the object by a given amount.
 
