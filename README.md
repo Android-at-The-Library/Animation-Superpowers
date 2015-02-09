@@ -2,16 +2,13 @@
 
 Adding basic animations to Images and Buttons of your app.
 
-## ViewPropertyAnimator - Absolute Destination
 
-This animation will move the object to the specified coordinate.
 
-Change the three nubers in the `bob.animate...` line to adjust the final x and y coordinates, 
-as well as the animation's duration (in milliseconds, so `1000` will be one second).
+**Common Step 1) for all examples**
 
-1. Just above the `@Override` of the `onCreate` method, add `private ImageView imageView;`
+**NOTE** These examples require you to place an imageView declaration just above the `@Override` of the `onCreate` method, add `private ImageView imageView;`
 
-It should look like this:
+It should look like this just above the `onCreate`:
 
 ```java
     private ImageView imageView;
@@ -20,7 +17,17 @@ It should look like this:
     protected void onCreate(Bundle savedInstanceState) {
 ```
 
-2. add this beneath your `setContentsView(...)` section line
+
+## ViewPropertyAnimator - Absolute Destination
+
+This animation will move the object to the specified coordinate.
+
+Change the three nubers in the `bob.animate...` line to adjust the final x and y coordinates, 
+as well as the animation's duration (in milliseconds, so `1000` will be one second).
+
+Step 2)
+
+ add this beneath your `setContentsView(...)` section line
 
 ```java
 imageView = (ImageView) findViewById(R.id.imageView);
@@ -38,18 +45,10 @@ bob.setOnClickListener( new View.onClickListener() {
 
 This animation will simply offset the object by a given amount.
 
-1. Just above the `@Override` of the `onCreate` method, add `private ImageView imageView;`
 
-It should look like this:
+Step 2) 
 
-```java
-    private ImageView imageView;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-```
-
-2. add this beneath your `setContentsView(...)` section line
+add this beneath your `setContentsView(...)` line:
 
 ```java
 imageView = (ImageView) findViewById(R.id.imageView);
@@ -62,3 +61,29 @@ bob.setOnClickListener( new View.onClickListener() {
   }
 });
 ```
+
+
+## ViewPropertyAnimator - Scale Animation
+
+
+setScaleY (and setScaleX) will scale the view by a floating point value.
+
+For example, use the number `2.0f` to do an animation for scaling to 200% of the initial height.
+
+Step 2)
+
+add this beneath your `setContentsView(...)` line:
+
+```java
+imageView = (ImageView) findViewById(R.id.imageView);
+
+public Button bob = (Button) findViewById(R.id.button);
+
+bob.setOnClickListener( new View.onClickListener() {
+  public void onClick(View v) {
+    bob.animate().setScaleY(1.5f).setDuration(500);
+  }
+});
+```
+
+
