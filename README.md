@@ -66,7 +66,7 @@ bob.setOnClickListener( new View.onClickListener() {
 ## ViewPropertyAnimator - Scale Animation
 
 
-setScaleY (and setScaleX) will scale the view by a floating point value.
+scaleY (and scaleX) will scale the view by a floating point value.
 
 For example, use the number `2.0f` to do an animation for scaling to 200% of the initial height.
 
@@ -79,11 +79,27 @@ imageView = (ImageView) findViewById(R.id.imageView);
 
 public Button bob = (Button) findViewById(R.id.button);
 
-bob.setOnClickListener( new View.onClickListener() {
+bob.setOnClickListener( new View.OnClickListener() {
   public void onClick(View v) {
-    bob.animate().setScaleY(1.5f).setDuration(500);
+    bob.animate().scaleY(1.5f).setDuration(500);
   }
 });
 ```
 
+## ViewPropertyAnimator - Scale Animation (Relative)
 
+scaleYBy (and scaleXBy) will scale the view by a given amount.
+
+add this beneath your `setContentsView(...)` line
+
+```java
+imageView = (ImageView) findViewById(R.id.imageView);
+
+bob = (Button) findViewById(R.id.button);
+
+bob.setOnClickListener( new View.OnClickListener() {
+    public void onClick(View v) {
+    bob.animate().scaleYBy(1.5f).setDuration(500);
+    }
+});
+```
