@@ -67,7 +67,7 @@ bob.setOnClickListener( new View.OnClickListener() {
 ## ViewPropertyAnimator - Scale Animation (Absolute)
 
 
-setScaleY (and setScaleX) will scale the view by a floating point value.
+`.scaleY` (and `.scaleX`) will scale the view by a floating point value.
 
 For example, use the number `2.0f` to do an animation for scaling to 200% of the initial height.
 
