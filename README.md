@@ -12,6 +12,7 @@ It should look like this just above the `onCreate`:
 
 ```java
     private ImageView imageView;
+    private Button bob;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +33,11 @@ Step 2)
 ```java
 imageView = (ImageView) findViewById(R.id.imageView);
 
-public Button bob = (Button) findViewById(R.id.button);
+bob = (Button) findViewById(R.id.button);
 
 bob.setOnClickListener( new View.OnClickListener() {
   public void onClick(View v) {
-    bob.animate().x(100).y(100).setDuration(500);
+    imageView.animate().x(100).y(100).setDuration(500);
   }
 });
 ```
@@ -53,11 +54,11 @@ add this beneath your `setContentsView(...)` line:
 ```java
 imageView = (ImageView) findViewById(R.id.imageView);
 
-public Button bob = (Button) findViewById(R.id.button);
+bob = (Button) findViewById(R.id.button);
 
-bob.setOnClickListener( new View.onClickListener() {
+bob.setOnClickListener( new View.OnClickListener() {
   public void onClick(View v) {
-    bob.animate().translationXBy(100).translationYBy(100).setDuration(500);
+    imageView.animate().translationXBy(100).translationYBy(100).setDuration(500);
   }
 });
 ```
@@ -77,11 +78,11 @@ add this beneath your `setContentsView(...)` line:
 ```java
 imageView = (ImageView) findViewById(R.id.imageView);
 
-public Button bob = (Button) findViewById(R.id.button);
+bob = (Button) findViewById(R.id.button);
 
-bob.setOnClickListener( new View.onClickListener() {
+bob.setOnClickListener( new View.OnClickListener() {
   public void onClick(View v) {
-    bob.animate().setScaleY(1.5f).setDuration(500);
+    imageView.animate().setScaleY(1.5f).setDuration(500);
   }
 });
 ```
