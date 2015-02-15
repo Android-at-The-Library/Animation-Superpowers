@@ -64,7 +64,7 @@ bob.setOnClickListener( new View.OnClickListener() {
 ```
 
 
-## ViewPropertyAnimator - Scale Animation
+## ViewPropertyAnimator - Scale Animation (Absolute)
 
 
 setScaleY (and setScaleX) will scale the view by a floating point value.
@@ -82,7 +82,7 @@ bob = (Button) findViewById(R.id.button);
 
 bob.setOnClickListener( new View.OnClickListener() {
   public void onClick(View v) {
-    imageView.animate().setScaleY(1.5f).setDuration(500);
+    imageView.animate().scaleY(1.5f).setDuration(500);
   }
 });
 ```
