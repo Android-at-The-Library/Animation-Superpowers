@@ -34,7 +34,7 @@ imageView = (ImageView) findViewById(R.id.imageView);
 
 public Button bob = (Button) findViewById(R.id.button);
 
-bob.setOnClickListener( new View.onClickListener() {
+bob.setOnClickListener( new View.OnClickListener() {
   public void onClick(View v) {
     bob.animate().x(100).y(100).setDuration(500);
   }
