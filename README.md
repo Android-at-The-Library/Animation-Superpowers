@@ -22,7 +22,7 @@ It should look like this just above the `onCreate`:
 
 This animation will move the object to the specified coordinate.
 
-Change the three nubers in the `bob.animate...` line to adjust the final x and y coordinates, 
+Change the three numbers in the `bob.animate...` line to adjust the final x and y coordinates, 
 as well as the animation's duration (in milliseconds, so `1000` will be one second).
 
 Step 2)
