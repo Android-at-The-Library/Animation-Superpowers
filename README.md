@@ -6,12 +6,11 @@ Adding basic animations to Images and Buttons of your app.
 
 **Common Step 1) for all examples**
 
-**NOTE** These examples require you to place an imageView declaration just above the `@Override` of the `onCreate` method, add `private ImageView imageView;`
+**NOTE** These examples require you to place an imageView declaration just above the `@Override` of the `onCreate` method, add `private Button bob;`
 
 It should look like this just above the `onCreate`:
 
 ```java
-    private ImageView imageView;
     private Button bob;
 
     @Override
@@ -31,8 +30,6 @@ Step 2)
  add this beneath your `setContentsView(...)` section line
 
 ```java
-imageView = (ImageView) findViewById(R.id.imageView);
-
 bob = (Button) findViewById(R.id.button);
 
 bob.setOnClickListener( new View.OnClickListener() {
@@ -52,8 +49,6 @@ Step 2)
 add this beneath your `setContentsView(...)` line:
 
 ```java
-imageView = (ImageView) findViewById(R.id.imageView);
-
 bob = (Button) findViewById(R.id.button);
 
 bob.setOnClickListener( new View.OnClickListener() {
@@ -76,8 +71,6 @@ Step 2)
 add this beneath your `setContentsView(...)` line:
 
 ```java
-imageView = (ImageView) findViewById(R.id.imageView);
-
 bob = (Button) findViewById(R.id.button);
 
 bob.setOnClickListener( new View.OnClickListener() {
@@ -94,8 +87,6 @@ scaleYBy (and scaleXBy) will scale the view by a given amount.
 add this beneath your `setContentsView(...)` line
 
 ```java
-imageView = (ImageView) findViewById(R.id.imageView);
-
 bob = (Button) findViewById(R.id.button);
 
 bob.setOnClickListener( new View.OnClickListener() {
